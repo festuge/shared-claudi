@@ -22,6 +22,11 @@ def call(String repoUrl){
                    sh 'mvn -v'
                }
            }
+           stage("test-global-config"){
+            steps {
+                sh 'cat /etc/passwd'
+            }
+           }
        }
 }
 }
